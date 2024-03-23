@@ -1839,5 +1839,40 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+ @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Apply animation to gallery list */
+    #fh5co-gallery-list {
+      display: flex;
+      list-style: none;
+      overflow: hidden; /* Hide overflowing content */
+    }
+
+    /* Apply animation to each list item */
+    #fh5co-gallery-list li {
+      flex: 0 0 33.333%; /* Ensure each image takes 1/3 width */
+      animation: slide 0.2s infinite alternate; /* Apply animation */
+    }
+
+    /* Adjust styling as needed */
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 15px;
+    }
+
+    .one-third {
+      height: 300px; /* Set height of gallery items */
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+    }
 
 /*# sourceMappingURL=style.css.map */
